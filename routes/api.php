@@ -22,10 +22,10 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 //    return 'Hello Universe';
 // });
 
-// Route::get('/users',function(Request $request){
-//   return $request->name . '-'. $request->email;
-// });
-
-Route::post('/alons', function(){
-  return 'Hello Universe';
+Route::get('/users',function(Request $request){
+  return $request->name . '-'. $request->email;
 });
+
+// Route::post('/alons', function(){
+//   return 'Hello Universe';
+// });
