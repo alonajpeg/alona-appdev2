@@ -17,3 +17,15 @@ use Illuminate\Support\Facades\Route;
 Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
+
+// Route::get('/greeting', function (){
+//    return 'Hello Universe';
+// });
+
+// Route::get('/users',function(Request $request){
+//   return $request->name . '-'. $request->email;
+// });
+
+Route::post('/alons', function(){
+  return 'Hello Universe';
+});
