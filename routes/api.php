@@ -2,6 +2,7 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UserController;
 
 /*
 |--------------------------------------------------------------------------
@@ -18,14 +19,29 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-// Route::get('/greeting', function (){
-//    return 'Hello Universe';
-// });
 
-Route::get('/users',function(Request $request){
-  return $request->name . '-'. $request->email;
+
+//GET Route
+Route::get('/greeting', function(){
+    return "Hello Universe";
 });
 
-// Route::post('/alons', function(){
-//   return 'Hello Universe';
-// });
+//POST Route
+Route::post('/post', function () {
+    return 'post route created';
+});
+
+//PUT Route
+Route::put('/put/{id}', function ($id) {
+    return 'put route created';
+});
+
+//PATCH Route
+Route::patch('/patch/{id}', function (){
+    return 'patch route created';
+});
+
+//DELETE Route
+Route::delete('/delete/{id}', function (){
+    return 'delete route created';
+});
