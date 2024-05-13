@@ -11,8 +11,24 @@ class UserController extends Controller
      */
     public function index()
     {
-        return 'Hello AlAzKa';
+        $data = [
+            [
+                "id" => 1,
+                "name" => "Alona"
+            ],
+            [
+                "id" => 2,
+                "name" => "Joy"
+            ],
+            [
+                "id" => 3,
+                "name" => "Lona",
+            ],
+        ];
+
+        return response()->json($data, 200);
     }
+
 
     /**
      * Store a newly created resource in storage.
@@ -35,7 +51,9 @@ class UserController extends Controller
      */
     public function update(Request $request, string $id)
     {
-        //
+        return response()->json([
+            "message" => "UPDATED id: " . $id
+        ]);
     }
 
     /**
@@ -43,6 +61,8 @@ class UserController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        return response()->json([
+            "message" => "DELETED id: " . $id
+        ]);
     }
 }
